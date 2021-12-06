@@ -10,12 +10,14 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  
   @override
   Widget build(BuildContext context) {
+    
     return MultiProvider(
       providers: [
         ChangeNotifierProvider<HiedShowProvider>(
-            create: (BuildContext context) => HiedShowProvider(value: true)),
+            create: (BuildContext context) => HiedShowProvider(true,true)),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
@@ -23,8 +25,10 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
+        
         home: MyHomePage(),
       ),
     );
+    
   }
 }
